@@ -1,17 +1,17 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getAuth} from 'firebase/auth';
+import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCDNZpa5TuPAHpsnXntbtWI7V62WqMntq8",
-  authDomain: "genius-car-services-18c77.firebaseapp.com",
-  projectId: "genius-car-services-18c77",
-  storageBucket: "genius-car-services-18c77.appspot.com",
-  messagingSenderId: "403666258008",
-  appId: "1:403666258008:web:0db9cdbd2b53da4dd2622d"
+  apiKey: "AIzaSyAIudevdPFhQguUXiTecUoAlYLMgGrsfM4",
+  authDomain: "genius-car-service-91fdd.firebaseapp.com",
+  projectId: "genius-car-service-91fdd",
+  storageBucket: "genius-car-service-91fdd.appspot.com",
+  messagingSenderId: "370366350306",
+  appId: "1:370366350306:web:d363c9e3b35abaf5de2fbb"
 };
 
 // Initialize Firebase

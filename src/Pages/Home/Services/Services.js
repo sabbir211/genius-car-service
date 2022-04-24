@@ -7,11 +7,24 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect( ()=>{
-        fetch('services.json')
+        fetch('http://localhost:5000/services')
         .then(res => res.json())
         .then(data => setServices(data));
     }, [])
-
+    const handleDelete=(id)=>{
+        fetch(`http://localhost:5000/services/${id}`,{
+            method:"delete",
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.deletedCount>=1){
+                alert(" document deleted successfully")
+            const restServices=services.filter(element=>element._id!==id)
+            setServices(restServices)
+            }
+        
+        })
+        }
     return (
         <div id='services' className='container'>
             <div className="row">
@@ -19,8 +32,9 @@ const Services = () => {
             <div className="services-container">
             {
                 services.map(service => <Service
-                    key={service.id}
+                    key={service._id}
                     service={service}
+                    handleDelete={handleDelete}
                 >
                 </Service>)
             }
